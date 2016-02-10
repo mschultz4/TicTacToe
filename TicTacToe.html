@@ -1,0 +1,122 @@
+<!doctype html>
+
+
+<html lang="en">
+
+<head>
+  <title>Tic Tac Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <style>
+  
+    body{
+      text-align: center;
+      margin: 0 auto;
+    }
+    
+    .btn-primary{
+      margin: 10px;
+    }
+    
+    .container{
+      width: 300px;
+    }
+    
+    .row > button{
+      height: 100px;
+      font-size: 30px;
+    }
+    
+    .winner {
+      background-color: #337AB7;
+    }
+    
+  </style>
+</head>
+<body ng-app="app" ng-controller="tictactoe as vm">
+    <h1>Minimax Tic Tac Toe</h1>
+    <div class="form-group">
+      <label>First Move: </label>
+      <input class="radio-inline" type="radio" ng-model="vm.firstMove" value="human">Human</input>
+      <input class="radio-inline" type="radio" ng-model="vm.firstMove" value="computer">Computer</input>
+    </div>
+    <button class="btn btn-primary" ng-click="vm.startGame()">Start Game</button>
+    
+    <div class="container">
+      <div class="row">
+        <button 
+          class="col-xs-4 btn btn-default"
+          ng-click="vm.playTurn(0)"
+          ng-class="{'winner': vm.currentGame.winners.indexOf(0) > -1}"
+        >
+          {{vm.symbols[vm.currentGame.board[0]]}}
+        </button>
+        <button
+          class="col-xs-4 btn btn-default"
+          ng-click="vm.playTurn(1)"
+          ng-class="{'winner': vm.currentGame.winners.indexOf(1) > -1}"
+        >
+          {{vm.symbols[vm.currentGame.board[1]]}}
+        </button>
+        <button 
+          class="col-xs-4 btn btn-default" 
+          ng-click="vm.playTurn(2)"
+          ng-class="{'winner': vm.currentGame.winners.indexOf(2) > -1}"
+          >
+          {{vm.symbols[vm.currentGame.board[2]]}}
+        </button>
+      </div>
+      <div class="row">
+        <button 
+          class="col-xs-4 btn btn-default" 
+          ng-click="vm.playTurn(3)"
+          ng-class="{'winner': vm.currentGame.winners.indexOf(3) > -1}"
+          >
+          {{vm.symbols[vm.currentGame.board[3]]}}
+        </button>
+        <button 
+          class="col-xs-4 btn btn-default" 
+          ng-click="vm.playTurn(4)"
+          ng-class="{'winner': vm.currentGame.winners.indexOf(4) > -1}"
+        >
+          {{vm.symbols[vm.currentGame.board[4]]}}
+        </button>
+        <button 
+          class="col-xs-4 btn btn-default" 
+          ng-click="vm.playTurn(5)"
+          ng-class="{'winner': vm.currentGame.winners.indexOf(5) > -1}"
+        >
+          {{vm.symbols[vm.currentGame.board[5]]}}
+        </button>
+      </div>
+      <div class="row">
+        <button 
+          class="col-xs-4 btn btn-default" 
+          ng-click="vm.playTurn(6)"
+          ng-class="{'winner': vm.currentGame.winners.indexOf(6) > -1}"
+        >
+          {{vm.symbols[vm.currentGame.board[6]]}}
+        </button>
+        <button 
+          class="col-xs-4 btn btn-default" 
+          ng-click="vm.playTurn(7)"
+          ng-class="{'winner': vm.currentGame.winners.indexOf(7) > -1}"
+        >
+          {{vm.symbols[vm.currentGame.board[7]]}}
+        </button>
+        <button 
+          class="col-xs-4 btn btn-default" 
+          ng-click="vm.playTurn(8)"
+          ng-class="{'winner': vm.currentGame.winners.indexOf(8) > -1}"
+        >
+          {{vm.symbols[vm.currentGame.board[8]]}}
+        </button>
+      </div>
+    </div>
+    <script src="../../bower_components/angular/angular.min.js"></script>
+    <script src="tictactoe.controller.js"></script>
+    <script src="mover.service.js"></script>
+
+</body>
+
+</html>
