@@ -9,10 +9,10 @@ angular
 
 function tictactoe($scope, mover) {
 
-	var vm = this;
+    var vm = this;
   
     vm.playTurn = playTurn;
-	vm.minimax = minimax;
+    vm.minimax = minimax;
     vm.score = score;
     vm.game = gameConstructor;
     vm.startGame = startGame;
@@ -31,7 +31,7 @@ function tictactoe($scope, mover) {
 			winners: []
         };
         
-        function update(move){
+       function update(move){
             if(this.activeTurn === 1){
                 this.board[move] = 1;
                 this.activeTurn = 2;
@@ -62,7 +62,7 @@ function tictactoe($scope, mover) {
        var scores = [];
        var moves = [];
        
-	   depth += 1;
+        depth += 1;
 	   
       var children = game.getMoves(); 
       children.forEach(function(move){
