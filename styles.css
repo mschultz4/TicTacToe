@@ -1,0 +1,21 @@
+body{
+  text-align: center;
+  margin: 0 auto;
+}
+
+.btn-primary{
+  margin: 10px;
+}
+
+.container{
+  width: 300px;
+}
+
+.row > button{
+  height: 100px;
+  font-size: 30px;
+}
+
+.winner {
+  background-color: #337AB7;
+}
