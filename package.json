@@ -1,0 +1,29 @@
+{
+  "name": "tictactoe",
+  "version": "1.0.0",
+  "description": "Tic Tac Toe application.  Utilizes the minimax algorithm.",
+  "main": "tictactoe.html",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-mocks": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "jasmine": "^2.5.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.5.8",
+    "jasmine": "^2.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mschultz4/TicTacToe.git"
+  },
+  "author": "Matt Schultz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mschultz4/TicTacToe/issues"
+  },
+  "homepage": "https://github.com/mschultz4/TicTacToe#readme"
+}
