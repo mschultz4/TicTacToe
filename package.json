@@ -11,7 +11,8 @@
   },
   "devDependencies": {
     "angular-mocks": "^1.5.8",
-    "jasmine": "^2.5.0"
+    "jasmine": "^2.5.0",
+    "webpack": "^1.13.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
